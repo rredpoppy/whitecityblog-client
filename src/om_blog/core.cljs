@@ -68,7 +68,7 @@
                                                                                     (str (get article "id")))
                                                                     (fn [res]
                                                                         (om/set-state! owner :article (js->clj res))))))}
-                                    (str (.get js/languages "es")))))))
+                                    (str (.get js/languages "en")))))))
 
 (defn article [article owner]
     (reify
