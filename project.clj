@@ -1,4 +1,4 @@
-(defproject wcc-blog-client "1.0.0"
+(defproject whitecityblog-client "1.0.0"
   :description "Client script for the WhiteCity City Blog"
   :url "http://whitecitycode.com"
   :license {:name "Eclipse Public License"
@@ -9,7 +9,9 @@
   :dependencies [[org.clojure/clojure "1.7.0"]
                  [racehub/om-bootstrap "0.6.1"]
                  [org.clojure/clojurescript "1.7.170"]
-                 [cljsjs/markdown "LATEST"]
+                 [cljsjs/markdown "0.6.0-beta1-0"]
+                 [org.webjars/jquery "2.2.2"]
+                 [org.webjars/bootstrap "3.3.6"]
                  [org.clojure/core.async "0.2.374"
                   :exclusions [org.clojure/tools.reader]]
                  [sablono "0.3.6"]
