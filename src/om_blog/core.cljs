@@ -1,4 +1,4 @@
-(ns om-blog.core
+(ns wcc-blog-client.core
     (:require [cljsjs.markdown :as markdown]
               [om.core :as om :include-macros true]
               [goog.events :as events]
@@ -68,7 +68,7 @@
                                                                                     (str (get article "id")))
                                                                     (fn [res]
                                                                         (om/set-state! owner :article (js->clj res))))))}
-                                    "Read Article")))))
+                                    (str (.get js/languages "es")))))))
 
 (defn article [article owner]
     (reify

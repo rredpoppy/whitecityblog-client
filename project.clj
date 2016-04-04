@@ -1,6 +1,6 @@
-(defproject om-blog "0.1.0-SNAPSHOT"
-  :description "FIXME: write this!"
-  :url "http://example.com/FIXME"
+(defproject wcc-blog-client "1.0.0"
+  :description "Client script for the WhiteCity City Blog"
+  :url "http://whitecitycode.com"
   :license {:name "Eclipse Public License"
             :url "http://www.eclipse.org/legal/epl-v10.html"}
 
@@ -27,11 +27,11 @@
                 :source-paths ["src"]
 
                 ;; If no code is to be run, set :figwheel true for continued automagical reloading
-                :figwheel {:on-jsload "om-blog.core/on-js-reload"}
+                :figwheel {:on-jsload "wcc-blog-client.core/on-js-reload"}
 
-                :compiler {:main om-blog.core
+                :compiler {:main wcc-blog-client.core
                            :asset-path "js/compiled/out"
-                           :output-to "resources/public/js/compiled/om_blog.js"
+                           :output-to "resources/public/js/compiled/wcc-blog-client.js"
                            :output-dir "resources/public/js/compiled/out"
                            :source-map-timestamp true}}
                ;; This next build is an compressed minified build for
@@ -39,8 +39,8 @@
                ;; lein cljsbuild once min
                {:id "min"
                 :source-paths ["src"]
-                :compiler {:output-to "resources/public/js/compiled/om_blog.js"
-                           :main om-blog.core
+                :compiler {:output-to "resources/public/js/compiled/wcc-blog-client.js"
+                           :main wcc-blog-client.core
                            :optimizations :advanced
                            :pretty-print false}}]}
 
