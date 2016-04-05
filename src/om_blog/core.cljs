@@ -1,4 +1,4 @@
-(ns wcc-blog-client.core
+(ns whitecityblog-client.core
     (:require [cljsjs.markdown :as markdown]
               [om.core :as om :include-macros true]
               [goog.events :as events]
@@ -36,7 +36,7 @@
                           :page-number 1}))
 
 (defn reload-articles [page-num channel]
-    (load-articles (str (.-origin (.-location js/window)) "/blogposts?page=" page-num)
+    (load-articles (str (.-origin (.-location js/window))"/blogposts?page=" page-num)
         (fn [res]
             (put! channel res))))
 
@@ -64,7 +64,7 @@
                                                                     (str (get (om/get-state owner :article) "body")))}})))
                                 (b/button {:className "arrowLink arrowRight"
                                            :on-click (fn [_] (do (om/set-state! owner :visible? true)
-                                                                 (load-articles (str (.-origin (.-location js/window)) "/blogposts/"
+                                                                 (load-articles (str (.-origin (.-location js/window))"/blogposts/"
                                                                                     (str (get article "id")))
                                                                     (fn [res]
                                                                         (om/set-state! owner :article (js->clj res))))))}
@@ -121,7 +121,7 @@
                             (om/transact! state :articles (fn [] (get change "articles")))
                             )(recur))))
                 (load-articles
-                    (str (.-origin (.-location js/window)) "/blogposts?page=" (- (:page-number state) 1))
+                    (str (.-origin (.-location js/window))"/blogposts?page=" (- (:page-number state) 1))
                         (fn [res]
                             (do
                                 (om/transact! state :articles (fn [] (get res "articles")))

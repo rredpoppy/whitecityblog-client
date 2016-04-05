@@ -29,11 +29,11 @@
                 :source-paths ["src"]
 
                 ;; If no code is to be run, set :figwheel true for continued automagical reloading
-                :figwheel {:on-jsload "wcc-blog-client.core/on-js-reload"}
+                :figwheel {:on-jsload "whitecityblog-client.core/on-js-reload"}
 
-                :compiler {:main wcc-blog-client.core
+                :compiler {:main whitecityblog-client.core
                            :asset-path "js/compiled/out"
-                           :output-to "resources/public/js/compiled/wcc-blog-client.js"
+                           :output-to "resources/public/js/compiled/whitecityblog-client.js"
                            :output-dir "resources/public/js/compiled/out"
                            :source-map-timestamp true}}
                ;; This next build is an compressed minified build for
@@ -41,8 +41,8 @@
                ;; lein cljsbuild once min
                {:id "min"
                 :source-paths ["src"]
-                :compiler {:output-to "resources/public/js/compiled/wcc-blog-client.js"
-                           :main wcc-blog-client.core
+                :compiler {:output-to "resources/public/js/compiled/whitecityblog-client.js"
+                           :main whitecityblog-client.core
                            :optimizations :advanced
                            :pretty-print false}}]}
 
