@@ -36,7 +36,7 @@
                           :page-number 1}))
 
 (defn reload-articles [page-num channel]
-    (load-articles (str (.-origin (.-location js/window))"/blogposts?page=" page-num)
+    (load-articles (str (.-origin (.-location js/window)) "/blogposts?page=" page-num)
         (fn [res]
             (put! channel res))))
 
